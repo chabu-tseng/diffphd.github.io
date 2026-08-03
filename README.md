@@ -7,8 +7,8 @@ DiffPhD: A Unified Differentiable Solver for Projective Heterogeneous Materials 
 Elastodynamics with Contact-Rich GPU-Acceleration.
 
 Demo result videos live under `static/videos/<demo-name>/`. Nine benchmarks from the
-paper (Armadillo, Crab, Gatorman, Napkin, Bouncing Ball, Bunny, Routing Tendon, Oreo,
-Dice) currently have footage; Cantilever, Plant, and Torus are not yet recorded and
+paper (Armadillo, Crab, Gatorman, Napkin, Plant, Bunny, Routing Tendon, Oreo, Dice)
+currently have footage; Cantilever, Bouncing Ball, and Torus are not yet recorded and
 so are omitted from the Results &amp; Demos section for now.
 
 If you find DiffPhD useful for your work please cite:
