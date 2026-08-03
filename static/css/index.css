@@ -2,6 +2,21 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+.section-alt-a {
+  background: #ffffff;
+}
+
+.section-alt-b {
+  background: #f2f3f5;
+}
+
+#BibTeX pre {
+  background: #ffffff;
+  border: 1px solid #dcdde1;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
 
 .footer .icon-link {
     font-size: 25px;
