@@ -170,7 +170,7 @@
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
+      <div class="column is-four-fifths">
         <h2 class="title is-3">Method Overview</h2>
         <div class="content has-text-justified">
           <p>
@@ -225,49 +225,6 @@
                 contraction: stiff weights enter <i>A</i> and widen its spectrum with contrast, but
                 every element still runs the <i>same</i> Newton-on-stretches, so the PD fixed-point
                 stays contractive.
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-
-        <div class="columns" style="margin-top: 1rem;">
-          <div class="column is-half">
-            <figure class="image">
-              <img src="./static/images/diffphd_fig5_trust_region.png"
-                   alt="Figure 5: Trust-region filter on the prox-map Hessian"
-                   style="width:100%; border-radius: 8px;">
-              <figcaption class="has-text-justified is-size-7" style="margin-top: 0.6rem; color:#555;">
-                <b>Figure 5. Trust-region filter on the prox-map Hessian, applied in the backward
-                pass only.</b>
-                (a) The IFT operator can be indefinite: under high deformation or near inversion, the
-                per-element prox-map Hessian picks up negative eigenvalues, making vanilla inversion
-                through the backward IFT unstable. (b) Backward trust-region filtering: a scalar
-                &tau;&nbsp;&isin;&nbsp;[0,1] interpolates between three canonical
-                filters&mdash;unprojected (&tau;=0), eigenvalue clamping (&tau;=1/2), and
-                absolute-value filtering (&tau;=1). A state-adaptive rule selects &tau;* from the
-                trust-region ratio evaluated on the last PD increment. (c) Backward-only, <i>A</i>
-                reused: the forward fixed-point is left untouched&mdash;any forward modification
-                would perturb the AA mixing and destabilise iteration. The filtered Hessian feeds the
-                adjoint chain, and the trust-region ratio's quadratic model reuses the persistent
-                factor of <i>A</i> at zero extra cost.
-              </figcaption>
-            </figure>
-          </div>
-          <div class="column is-half">
-            <figure class="image">
-              <img src="./static/images/diffphd_pipeline.png"
-                   alt="Figure 6: One persistent factor, shared across forward, backward, and contact"
-                   style="width:100%; border-radius: 8px;">
-              <figcaption class="has-text-justified is-size-7" style="margin-top: 0.6rem; color:#555;">
-                <b>Figure 6. One persistent factor, shared across forward, backward, and
-                contact.</b>
-                (a) The SPD operator <i>A</i> is factorised once via METIS nested dissection into
-                <i>A</i><sup>&minus;1</sup>&nbsp;=&nbsp;<i>S<sup>T</sup>S</i>; the factor pair sits
-                in persistent GPU buffers. (b) Any <i>A</i><sup>&minus;1</sup><i>v</i> is evaluated
-                as two sparse matrix&ndash;vector products, <i>S<sup>T</sup>(Sv)</i>; the dense
-                inverse is never materialised. (c) The same factor pair serves the forward global
-                solve, the contact Delassus operator, and the backward adjoint&mdash;refactorisation
-                is triggered only by a topology, material, or damping change.
               </figcaption>
             </figure>
           </div>
