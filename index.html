@@ -3,24 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="DiffPhD: A Unified Differentiable Solver for Projective Heterogeneous Materials in Elastodynamics with Contact-Rich GPU-Acceleration.">
+  <meta name="keywords" content="DiffPhD, Projective Dynamics, Differentiable Simulation, Heterogeneous Materials, Hyperelasticity, Contact, Real2Sim, GPU">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
+  <title>DiffPhD: A Unified Differentiable Solver for Heterogeneous Elastodynamics</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -42,85 +28,48 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
-
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-2 publication-title">DiffPhD: A Unified Differentiable Solver for
+            Projective Heterogeneous Materials in Elastodynamics with Contact-Rich
+            GPU-Acceleration</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span>
+            <span class="author-block">Shih-Yu Lai<sup>1,2*</sup>,</span>
+            <span class="author-block">Sung-Han Tien<sup>1*</sup>,</span>
+            <span class="author-block">Jui-I Huang<sup>1</sup>,</span>
+            <span class="author-block">Yen-Chen Tseng<sup>1</sup>,</span>
+            <span class="author-block">Yi-Ting Chiu<sup>1</sup>,</span>
+            <span class="author-block">Siyuan Luo<sup>3</sup>,</span>
+            <span class="author-block">Ziqiu Zeng<sup>3</sup>,</span>
+            <span class="author-block">Fan Shi<sup>3</sup>,</span>
+            <span class="author-block">Peter Yichen Chen<sup>4</sup>,</span>
+            <span class="author-block">Tiantian Liu<sup>5</sup>,</span>
+            <span class="author-block">Yu-Lun Liu<sup>6</sup>,</span>
+            <span class="author-block">Bing-Yu Chen<sup>1†*</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>National Taiwan University,</span>
+            <span class="author-block"><sup>2</sup>MoonShine Animation Studio,</span>
+            <span class="author-block"><sup>3</sup>National University of Singapore,</span>
+            <br>
+            <span class="author-block"><sup>4</sup>The University of British Columbia,</span>
+            <span class="author-block"><sup>5</sup>Independent Researcher,</span>
+            <span class="author-block"><sup>6</sup>National Yang Ming Chiao Tung University</span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">* Equal contribution&nbsp;&nbsp;&nbsp;† Corresponding author</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="./static/pdf/diffphd_paper.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -129,7 +78,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="https://arxiv.org/abs/2605.14526"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -139,33 +88,24 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark" disabled>
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
-                  <span>Video</span>
+                  <span>Video (coming soon)</span>
                 </a>
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
-                   class="external-link button is-normal is-rounded is-dark">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark" disabled>
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (coming soon)</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
             </div>
 
           </div>
@@ -178,73 +118,12 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+      <img src="./static/images/diffphd_teaser.png" alt="DiffPhD teaser figure" style="width:100%; border-radius: 8px;">
+      <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+        <span class="dnerf">DiffPhD</span> is a GPU-accelerated differentiable Projective Dynamics
+        solver that handles heterogeneous materials, hyperelasticity under large deformations, and
+        contact-rich interactions&mdash;within a single stable forward&ndash;backward pass.
       </h2>
-    </div>
-  </div>
-</section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -258,48 +137,59 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Differentiable simulation of soft bodies is a foundation for system identification,
+            trajectory optimization, and Real2Sim transfer. Yet, existing methods such as the
+            differentiable Projective Dynamics (DiffPD) struggle when faced with heterogeneous
+            materials with extreme stiffness contrasts, hyperelasticity under large deformations,
+            and contact-rich interactions, which are common scenarios in the real world. We present
+            <b>DiffPhD</b>, a unified GPU-accelerated differentiable Projective Dynamics framework for
+            heterogeneous materials that tackles these intertwined challenges simultaneously. Our
+            key insight is a careful integration of: (i) stiffness-aware projective weights to embed
+            heterogeneity into the global system; (ii) trust-region eigenvalue filtering lifted to
+            the backward pass for stable hyperelastic gradients with a type-II Anderson Acceleration
+            scheme; and (iii) a unified GPU pipeline that reuses a single sparse factor across
+            forward, backward, and contact computations, with stiffness-amplified Rayleigh damping
+            folded into the same factor for heterogeneity-aware dissipation at zero recurring cost.
+            DiffPhD achieves strict gradient accuracy while delivering up to an order-of-magnitude
+            speedup over prior differentiable solvers on heterogeneous, hyperelastic, contact-rich
+            benchmarks. Crucially, this speedup does not come at the cost of stability: DiffPhD
+            remains convergent on stiffness contrasts up to 100&times; where prior PD solvers degrade.
+            This unlocks end-to-end gradient-based optimization on regimes previously bottlenecked by
+            either solver fragility or per-iteration cost&mdash;shell&ndash;joint composite creatures,
+            soft characters wielding stiff weapons, and soft-gripper robotic manipulation&mdash;all
+            handled within a single forward&ndash;backward pass.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
+  </div>
+</section>
 
-    <!-- Paper video. -->
+
+<section class="section">
+  <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <h2 class="title is-3">Method Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            DiffPhD's design rests on one observation: Projective Dynamics' global stiffness matrix
+            <i>A</i> is the shared backbone of every expensive operation&mdash;forward global step,
+            Delassus contact compliance, backward adjoint&mdash;so the solver is organized around
+            making <i>A</i> cheap to invert and robust under contrast. Heterogeneity is routed
+            <i>structurally</i> through stiffness-aware projective weights baked directly into the
+            global matrix; a trust-region filter is lifted onto the proximal-map Hessian in the
+            backward pass to yield accurate Neo-Hookean gradients at high Poisson's ratios and large
+            deformations; and a single persistent sparse-inverse factor is reused across forward,
+            backward, and frictional-contact computations for an order-of-magnitude wall-clock
+            improvement.
+          </p>
         </div>
+        <img src="./static/images/diffphd_pipeline.png" alt="DiffPhD unified GPU pipeline figure"
+             style="width:100%; border-radius: 8px; margin-top: 1rem;">
       </div>
     </div>
-    <!--/ Paper video. -->
   </div>
 </section>
 
@@ -307,135 +197,258 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results &amp; Demos</h2>
         <div class="content has-text-justified">
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
+            We validate DiffPhD on heterogeneous, hyperelastic, contact-rich benchmarks spanning
+            forward simulation stability, differentiable inverse problems (system identification,
+            initial-state and trajectory optimization), and Real2Sim robotic manipulation. Each demo
+            below reserves a slot for its result video&mdash;drop the corresponding
+            <code>.mp4</code> file into <code>static/videos/</code> to fill it in.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
+
+    <!--
+      HOW TO FILL A VIDEO SLOT:
+      Once static/videos/<name>.mp4 exists, replace that card's
+        <div class="video-placeholder"> ... </div>
+      with:
+        <video autoplay controls muted loop playsinline>
+          <source src="./static/videos/<name>.mp4" type="video/mp4">
+        </video>
+    -->
+
+    <!-- 5.2 Heterogeneous Forward Simulation -->
+    <h3 class="title is-4 demo-section-title">Heterogeneous Forward Simulation</h3>
+    <div class="demo-grid">
+
+      <div class="demo-card">
+        <div class="video-placeholder">
+          <div class="video-placeholder-inner">
+            <i class="fas fa-video"></i>
+            <span>Video placeholder</span>
+            <span class="video-placeholder-filename">static/videos/cantilever.mp4</span>
+          </div>
+        </div>
+        <div class="demo-card-body">
+          <span class="demo-tag">PD energy under heterogeneity</span>
+          <div class="demo-card-title">Cantilever</div>
+          <p class="demo-card-desc">A beam partitioned into a stiff middle section (10&times;)
+            between two soft ends is twisted and released. DiffPhD's stiffness-aware weights keep
+            the energy landscape smooth and artifact-free at the material interface.</p>
+        </div>
+      </div>
+
+      <div class="demo-card">
+        <div class="video-placeholder">
+          <div class="video-placeholder-inner">
+            <i class="fas fa-video"></i>
+            <span>Video placeholder</span>
+            <span class="video-placeholder-filename">static/videos/armadillo.mp4</span>
+          </div>
+        </div>
+        <div class="demo-card-body">
+          <span class="demo-tag">Homogeneous vs. Heterogeneous</span>
+          <div class="demo-card-title">Armadillo (Twist)</div>
+          <p class="demo-card-desc">A twisted Armadillo mesh height-partitioned into three
+            sub-regions with stiffness ratios from 10&times; to 100&times;. DiffPhD remains stable
+            across the entire range where DiffPD fails to converge beyond ~10&times;.</p>
+        </div>
+      </div>
+
+      <div class="demo-card">
+        <div class="video-placeholder">
+          <div class="video-placeholder-inner">
+            <i class="fas fa-video"></i>
+            <span>Video placeholder</span>
+            <span class="video-placeholder-filename">static/videos/crab.mp4</span>
+          </div>
+        </div>
+        <div class="demo-card-body">
+          <span class="demo-tag">Homogeneous vs. Heterogeneous</span>
+          <div class="demo-card-title">Crab Pull-Up</div>
+          <p class="demo-card-desc">A shell&ndash;joint composite crab with a stiff carapace
+            (10&times;) coupled to soft joints is pulled upward by its carapace, cleanly lifting the
+            soft legs off the ground&mdash;unlike the single-stiffness baseline.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 5.3 Contact-Rich Forward Simulation -->
+    <h3 class="title is-4 demo-section-title">Contact-Rich Forward Simulation</h3>
+    <div class="demo-grid">
+
+      <div class="demo-card">
+        <div class="video-placeholder">
+          <div class="video-placeholder-inner">
+            <i class="fas fa-video"></i>
+            <span>Video placeholder</span>
+            <span class="video-placeholder-filename">static/videos/gatorman.mp4</span>
+          </div>
+        </div>
+        <div class="demo-card-body">
+          <span class="demo-tag">Mesh-to-mesh contact</span>
+          <div class="demo-card-title">Gatorman</div>
+          <p class="demo-card-desc">A high-resolution Gatorman character wields a stiff sword
+            (60&times; the body's reference stiffness) to strike a target sphere, exercising DiffPhD's
+            unified Signorini&ndash;Coulomb contact pipeline under transient impact.</p>
+        </div>
+      </div>
+
+      <div class="demo-card">
+        <div class="video-placeholder">
+          <div class="video-placeholder-inner">
+            <i class="fas fa-video"></i>
+            <span>Video placeholder</span>
+            <span class="video-placeholder-filename">static/videos/napkin.mp4</span>
+          </div>
+        </div>
+        <div class="demo-card-body">
+          <span class="demo-tag">Homogeneous vs. Heterogeneous</span>
+          <div class="demo-card-title">Napkin: Codimensional Contact</div>
+          <p class="demo-card-desc">A one-layer napkin drapes over spherical obstacles of growing
+            size, with contact sets from 6% to 50% of the mesh. A heterogeneous variant (0.1&times;
+            soft half vs. 1&times; stiff half) produces asymmetric, more pronounced draping.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 5.4 Differentiable Inverse Problems -->
+    <h3 class="title is-4 demo-section-title">Differentiable Inverse Problems</h3>
+    <div class="demo-grid">
+
+      <div class="demo-card">
+        <div class="video-placeholder">
+          <div class="video-placeholder-inner">
+            <i class="fas fa-video"></i>
+            <span>Video placeholder</span>
+            <span class="video-placeholder-filename">static/videos/bouncing_ball.mp4</span>
+          </div>
+        </div>
+        <div class="demo-card-body">
+          <span class="demo-tag">System identification</span>
+          <div class="demo-card-title">Bouncing Ball</div>
+          <p class="demo-card-desc">Young's modulus and Poisson's ratio (homogeneous), or six
+            per-sector material parameters (heterogeneous, three colored sectors), are recovered from
+            a single falling/bouncing trajectory via gradient-based optimization.</p>
+        </div>
+      </div>
+
+      <div class="demo-card">
+        <div class="video-placeholder">
+          <div class="video-placeholder-inner">
+            <i class="fas fa-video"></i>
+            <span>Video placeholder</span>
+            <span class="video-placeholder-filename">static/videos/plant.mp4</span>
+          </div>
+        </div>
+        <div class="demo-card-body">
+          <span class="demo-tag">System identification</span>
+          <div class="demo-card-title">Plant</div>
+          <p class="demo-card-desc">System identification on an articulated potted-plant mesh whose
+            slender branches induce strong geometric non-uniformity, disambiguating material
+            parameters from a single 100-frame oscillatory trajectory.</p>
+        </div>
+      </div>
+
+      <div class="demo-card">
+        <div class="video-placeholder">
+          <div class="video-placeholder-inner">
+            <i class="fas fa-video"></i>
+            <span>Video placeholder</span>
+            <span class="video-placeholder-filename">static/videos/bunny.mp4</span>
+          </div>
+        </div>
+        <div class="demo-card-body">
+          <span class="demo-tag">Initial-state optimization</span>
+          <div class="demo-card-title">Bunny: Inverse Design</div>
+          <p class="demo-card-desc">On the heterogeneous Bunny benchmark, DiffPhD optimizes initial
+            position, orientation, and velocity so the bunny's center of mass reaches a target after
+            100 frames&mdash;converging where baseline solvers plateau on a suboptimal residual.</p>
+        </div>
+      </div>
+
+      <div class="demo-card">
+        <div class="video-placeholder">
+          <div class="video-placeholder-inner">
+            <i class="fas fa-video"></i>
+            <span>Video placeholder</span>
+            <span class="video-placeholder-filename">static/videos/routing_tendon.mp4</span>
+          </div>
+        </div>
+        <div class="demo-card-body">
+          <span class="demo-tag">Trajectory optimization</span>
+          <div class="demo-card-title">Routing Tendon</div>
+          <p class="demo-card-desc">A vertical beam actuated through 16 muscle groups is optimized
+            so its tip reaches a target at frame 100, contrasting two distinct muscle-fibre routing
+            layouts through the same volume.</p>
+        </div>
+      </div>
+
+      <div class="demo-card">
+        <div class="video-placeholder">
+          <div class="video-placeholder-inner">
+            <i class="fas fa-video"></i>
+            <span>Video placeholder</span>
+            <span class="video-placeholder-filename">static/videos/torus.mp4</span>
+          </div>
+        </div>
+        <div class="demo-card-body">
+          <span class="demo-tag">Trajectory optimization</span>
+          <div class="demo-card-title">Torus: Locomotion</div>
+          <p class="demo-card-desc">Per-element segmental actuation over a 200-frame rollout is
+            optimized via L-BFGS to maximize forward displacement, recovering a peristaltic rolling
+            gait from an uncoordinated initial guess.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 5.5 Real2Sim -->
+    <h3 class="title is-4 demo-section-title">Real2Sim Robot Manipulation</h3>
+    <div class="demo-grid">
+
+      <div class="demo-card">
+        <div class="video-placeholder">
+          <div class="video-placeholder-inner">
+            <i class="fas fa-video"></i>
+            <span>Video placeholder</span>
+            <span class="video-placeholder-filename">static/videos/oreo.mp4</span>
+          </div>
+        </div>
+        <div class="demo-card-body">
+          <span class="demo-tag">Extreme-contrast capability check</span>
+          <div class="demo-card-title">Oreo: Robot Manipulator</div>
+          <p class="demo-card-desc">A Google Robot arm closes its 10<sup>13</sup> Pa rigid claws on a
+            five-body cookie stack (10<sup>8</sup> Pa ball, 4.55&times;10<sup>5</sup> Pa soft body),
+            the only solver among those tested to remain numerically stable at this contrast.</p>
+        </div>
+      </div>
+
+      <div class="demo-card">
+        <div class="video-placeholder">
+          <div class="video-placeholder-inner">
+            <i class="fas fa-video"></i>
+            <span>Video placeholder</span>
+            <span class="video-placeholder-filename">static/videos/dice.mp4</span>
+          </div>
+        </div>
+        <div class="demo-card-body">
+          <span class="demo-tag">Real2Sim recovery</span>
+          <div class="demo-card-title">Dice</div>
+          <p class="demo-card-desc">Driven by real captured data of a UR5 arm pressing a soft die,
+            DiffPhD recovers the in-plane contact location so the simulated deformation matches the
+            captured video, closing the real-to-sim gap end-to-end.</p>
+        </div>
+      </div>
+
+    </div>
 
   </div>
 </section>
@@ -444,11 +457,11 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@article{lai2026diffphd,
+  author  = {Lai, Shih-Yu and Tien, Sung-Han and Huang, Jui-I and Tseng, Yen-Chen and Chiu, Yi-Ting and Luo, Siyuan and Zeng, Ziqiu and Shi, Fan and Chen, Peter Yichen and Liu, Tiantian and Liu, Yu-Lun and Chen, Bing-Yu},
+  title   = {DiffPhD: A Unified Differentiable Solver for Projective Heterogeneous Materials in Elastodynamics with Contact-Rich GPU-Acceleration},
+  journal = {arXiv preprint arXiv:2605.14526},
+  year    = {2026}
 }</code></pre>
   </div>
 </section>
@@ -458,27 +471,21 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+         href="./static/pdf/diffphd_paper.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="#" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
-        <div class="content">
+        <div class="content has-text-centered">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            Website template adapted from <a href="https://nerfies.github.io">Nerfies</a>,
+            licensed under a <a rel="license"
+              href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+            Attribution-ShareAlike 4.0 International License</a>.
           </p>
         </div>
       </div>

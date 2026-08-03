@@ -1,16 +1,28 @@
-# Nerfies
+# DiffPhD Project Page
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository that contains the source code for the DiffPhD project page,
+hosted via GitHub Pages.
 
-If you find Nerfies useful for your work please cite:
+DiffPhD: A Unified Differentiable Solver for Projective Heterogeneous Materials in
+Elastodynamics with Contact-Rich GPU-Acceleration.
+
+Demo videos are not yet included — each demo card in `index.html` reserves a slot
+(`static/videos/<name>.mp4`) with a placeholder box. Drop the corresponding `.mp4`
+file into `static/videos/` and it will render automatically once you swap the
+placeholder `<div class="video-placeholder">` for a `<video>` tag (see comments
+inline in `index.html`).
+
+If you find DiffPhD useful for your work please cite:
 ```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+@article{lai2026diffphd,
+  author  = {Lai, Shih-Yu and Tien, Sung-Han and Huang, Jui-I and Tseng, Yen-Chen and Chiu, Yi-Ting and Luo, Siyuan and Zeng, Ziqiu and Shi, Fan and Chen, Peter Yichen and Liu, Tiantian and Liu, Yu-Lun and Chen, Bing-Yu},
+  title   = {DiffPhD: A Unified Differentiable Solver for Projective Heterogeneous Materials in Elastodynamics with Contact-Rich GPU-Acceleration},
+  journal = {arXiv preprint arXiv:2605.14526},
+  year    = {2026}
 }
 ```
+
+This website template is adapted from [Nerfies](https://nerfies.github.io).
 
 # Website License
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.

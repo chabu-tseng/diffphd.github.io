@@ -155,3 +155,100 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+/* ---- DiffPhD demo gallery ---- */
+
+.demo-section-title {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.demo-card {
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.demo-card-body {
+  padding: 1rem 1.2rem 1.2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.demo-card-title {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.demo-card-desc {
+  color: #444;
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.video-placeholder {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  background: repeating-linear-gradient(
+    135deg,
+    #f4f4f6,
+    #f4f4f6 10px,
+    #ebebef 10px,
+    #ebebef 20px
+  );
+  border-bottom: 1px dashed #c6c6cc;
+}
+
+.video-placeholder .video-placeholder-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #8a8a92;
+  padding: 0.5rem;
+}
+
+.video-placeholder .video-placeholder-inner i {
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.video-placeholder .video-placeholder-filename {
+  font-family: monospace;
+  font-size: 0.78rem;
+  margin-top: 0.3rem;
+  color: #a9a9b1;
+  word-break: break-all;
+  padding: 0 0.5rem;
+}
+
+.demo-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: #eef1fb;
+  color: #3457d5;
+  margin-bottom: 0.5rem;
+  width: fit-content;
+}
