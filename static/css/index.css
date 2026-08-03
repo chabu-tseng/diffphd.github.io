@@ -217,6 +217,26 @@ body {
   margin-bottom: 1rem;
 }
 
+.demo-stack .demo-card {
+  max-width: none;
+  margin: 0;
+}
+
+.demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.demo-row .demo-card {
+  margin: 0;
+  flex: 1 1 380px;
+  max-width: 480px;
+}
+
 .demo-video-grid {
   display: grid;
   gap: 3px;
