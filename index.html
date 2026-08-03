@@ -37,7 +37,7 @@
             Projective Heterogeneous Materials in Elastodynamics with Contact-Rich
             GPU-Acceleration</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">Shih-Yu Lai<sup>1,2*</sup>,</span>
+            <span class="author-block">Shih-Yu Lai<sup>1,2,7*</sup>,</span>
             <span class="author-block">Sung-Han Tien<sup>1*</sup>,</span>
             <span class="author-block">Jui-I Huang<sup>1</sup>,</span>
             <span class="author-block">Yen-Chen Tseng<sup>1</sup>,</span>
@@ -58,7 +58,8 @@
             <br>
             <span class="author-block"><sup>4</sup>The University of British Columbia,</span>
             <span class="author-block"><sup>5</sup>Independent Researcher,</span>
-            <span class="author-block"><sup>6</sup>National Yang Ming Chiao Tung University</span>
+            <span class="author-block"><sup>6</sup>National Yang Ming Chiao Tung University,</span>
+            <span class="author-block"><sup>7</sup>Aalto University, Finland</span>
           </div>
 
           <div class="is-size-6 publication-authors">
@@ -146,18 +147,19 @@
             heterogeneous materials that tackles these intertwined challenges simultaneously. Our
             key insight is a careful integration of: (i) stiffness-aware projective weights to embed
             heterogeneity into the global system; (ii) trust-region eigenvalue filtering lifted to
-            the backward pass for stable hyperelastic gradients with a type-II Anderson Acceleration
-            scheme; and (iii) a unified GPU pipeline that reuses a single sparse factor across
+            the backward pass for stable hyperelastic gradients and a type-II Anderson Acceleration
+            scheme with dual-gate convergence to stabilize forward iteration under large stiffness
+            contrasts; and (iii) a unified GPU pipeline that reuses a single sparse factor across
             forward, backward, and contact computations, with stiffness-amplified Rayleigh damping
             folded into the same factor for heterogeneity-aware dissipation at zero recurring cost.
-            DiffPhD achieves strict gradient accuracy while delivering up to an order-of-magnitude
-            speedup over prior differentiable solvers on heterogeneous, hyperelastic, contact-rich
-            benchmarks. Crucially, this speedup does not come at the cost of stability: DiffPhD
-            remains convergent on stiffness contrasts up to 100&times; where prior PD solvers degrade.
-            This unlocks end-to-end gradient-based optimization on regimes previously bottlenecked by
-            either solver fragility or per-iteration cost&mdash;shell&ndash;joint composite creatures,
-            soft characters wielding stiff weapons, and soft-gripper robotic manipulation&mdash;all
-            handled within a single forward&ndash;backward pass.
+            DiffPhD delivers analytic adjoints&mdash;machine-precision on the elastic path, bounded
+            and quantified under contact&mdash;with up to an order-of-magnitude speedup over prior
+            differentiable solvers. Crucially, this speedup does not come at the cost of stability:
+            DiffPhD remains convergent on stiffness contrasts up to 100&times; where prior PD solvers
+            degrade. This unlocks end-to-end gradient-based optimization on regimes previously
+            bottlenecked by either solver fragility or per-iteration cost&mdash;shell&ndash;joint
+            composite creatures, soft characters wielding stiff weapons, and soft-gripper robotic
+            manipulation&mdash;all handled within a single forward&ndash;backward pass.
           </p>
         </div>
       </div>
