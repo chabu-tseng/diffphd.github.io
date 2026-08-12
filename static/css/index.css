@@ -295,6 +295,16 @@ body {
   margin-bottom: 1rem;
 }
 
+.demo-section-label {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #3457d5;
+  margin-bottom: 0.75rem;
+}
+
 .demo-stack {
   display: flex;
   flex-direction: column;

@@ -242,289 +242,294 @@
       </div>
     </div>
 
-    <!-- ── Group Carousel: arrows switch between the 4 demo sections ── -->
+    <!-- ── Per-demo Carousel: each demo card is its own slide ── -->
     <div class="group-carousel-wrapper">
 
-      <button class="group-carousel-btn group-carousel-prev" aria-label="Previous group">&#8249;</button>
-      <button class="group-carousel-btn group-carousel-next" aria-label="Next group">&#8250;</button>
+      <button class="group-carousel-btn group-carousel-prev" aria-label="Previous">&#8249;</button>
+      <button class="group-carousel-btn group-carousel-next" aria-label="Next">&#8250;</button>
 
-      <!-- ══ Group 1: Heterogeneous Forward Simulation ══ -->
+      <!-- ── Slide 1: Armadillo ── -->
       <div class="group-slide active">
-        <h3 class="title is-4 demo-section-title">Heterogeneous Forward Simulation</h3>
-        <div class="demo-stack">
-
-          <div class="demo-card">
-            <div class="demo-video-grid cols-4">
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/armadillo/homo_pd_energy.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Homogeneous &middot; PD Energy</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/armadillo/homo_neohookean.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Homogeneous &middot; Neo-Hookean</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/armadillo/hetero_pd_energy.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Heterogeneous &middot; PD Energy</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/armadillo/hetero_neohookean.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Heterogeneous &middot; Neo-Hookean</span>
-              </div>
+        <div class="demo-section-label">Heterogeneous Forward Simulation</div>
+        <div class="demo-card">
+          <div class="demo-video-grid cols-4">
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/armadillo/homo_pd_energy.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Homogeneous &middot; PD Energy</span>
             </div>
-            <div class="demo-card-body">
-              <span class="demo-tag">Homogeneous vs. Heterogeneous</span>
-              <div class="demo-card-title">Armadillo (Twist)</div>
-              <p class="demo-card-desc">A twisted Armadillo mesh height-partitioned into three
-                sub-regions with stiffness ratios from 10&times; to 100&times;, compared under both the
-                corotated PD energy and full Neo-Hookean hyperelasticity. DiffPhD remains stable across
-                the entire range where DiffPD fails to converge beyond ~10&times;.</p>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/armadillo/homo_neohookean.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Homogeneous &middot; Neo-Hookean</span>
+            </div>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/armadillo/hetero_pd_energy.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Heterogeneous &middot; PD Energy</span>
+            </div>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/armadillo/hetero_neohookean.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Heterogeneous &middot; Neo-Hookean</span>
             </div>
           </div>
-
-          <div class="demo-card">
-            <div class="demo-video-grid cols-3">
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/crab/homo_front.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Homogeneous</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/crab/hetero_front.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Heterogeneous (front)</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/crab/hetero_back.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Heterogeneous (back)</span>
-              </div>
-            </div>
-            <div class="demo-card-body">
-              <span class="demo-tag">Homogeneous vs. Heterogeneous</span>
-              <div class="demo-card-title">Crab Pull-Up</div>
-              <p class="demo-card-desc">A shell&ndash;joint composite crab with a stiff carapace
-                (10&times;) coupled to soft joints is pulled upward by its carapace, cleanly lifting the
-                soft legs off the ground&mdash;unlike the single-stiffness baseline.</p>
-            </div>
+          <div class="demo-card-body">
+            <span class="demo-tag">Homogeneous vs. Heterogeneous</span>
+            <div class="demo-card-title">Armadillo (Twist)</div>
+            <p class="demo-card-desc">A twisted Armadillo mesh height-partitioned into three
+              sub-regions with stiffness ratios from 10&times; to 100&times;, compared under both the
+              corotated PD energy and full Neo-Hookean hyperelasticity. DiffPhD remains stable across
+              the entire range where DiffPD fails to converge beyond ~10&times;.</p>
           </div>
-
         </div>
-      </div><!-- /group 1 -->
+      </div>
 
-      <!-- ══ Group 2: Contact-Rich Forward Simulation ══ -->
+      <!-- ── Slide 2: Crab ── -->
       <div class="group-slide">
-        <h3 class="title is-4 demo-section-title">Contact-Rich Forward Simulation</h3>
-        <div class="demo-stack">
-
-          <div class="demo-card">
-            <div class="demo-video-single">
-              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/gatorman/gatorman.mp4" type="video/mp4"></video></div>
+        <div class="demo-section-label">Heterogeneous Forward Simulation</div>
+        <div class="demo-card">
+          <div class="demo-video-grid cols-3">
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/crab/homo_front.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Homogeneous</span>
             </div>
-            <div class="demo-card-body">
-              <span class="demo-tag">Mesh-to-mesh contact</span>
-              <div class="demo-card-title">Gatorman</div>
-              <p class="demo-card-desc">A high-resolution Gatorman character wields a stiff sword
-                (60&times; the body's reference stiffness) to strike a target sphere, exercising DiffPhD's
-                unified Signorini&ndash;Coulomb contact pipeline under transient impact.</p>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/crab/hetero_front.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Heterogeneous (front)</span>
             </div>
-          </div>
-
-          <div class="demo-card">
-            <div class="demo-video-grid cols-4">
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/homo_verysmall.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Homo &middot; 6%</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/homo_small.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Homo &middot; 24%</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/homo_normal.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Homo &middot; 38%</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/homo_big.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Homo &middot; 50%</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/hetero_verysmall.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Hetero &middot; 6%</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/hetero_small.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Hetero &middot; 24%</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/hetero_normal.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Hetero &middot; 38%</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/hetero_big.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Hetero &middot; 50%</span>
-              </div>
-            </div>
-            <div class="demo-card-body">
-              <span class="demo-tag">Homogeneous vs. Heterogeneous</span>
-              <div class="demo-card-title">Napkin: Codimensional Contact</div>
-              <p class="demo-card-desc">A one-layer napkin drapes over spherical obstacles of growing
-                size, with contact sets from 6% to 50% of the mesh (columns, left to right). The
-                heterogeneous variant (bottom row: 0.1&times; soft half vs. 1&times; stiff half) produces
-                asymmetric, more pronounced draping than the homogeneous variant (top row).</p>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/crab/hetero_back.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Heterogeneous (back)</span>
             </div>
           </div>
-
+          <div class="demo-card-body">
+            <span class="demo-tag">Homogeneous vs. Heterogeneous</span>
+            <div class="demo-card-title">Crab Pull-Up</div>
+            <p class="demo-card-desc">A shell&ndash;joint composite crab with a stiff carapace
+              (10&times;) coupled to soft joints is pulled upward by its carapace, cleanly lifting the
+              soft legs off the ground&mdash;unlike the single-stiffness baseline.</p>
+          </div>
         </div>
-      </div><!-- /group 2 -->
+      </div>
 
-      <!-- ══ Group 3: Differentiable Inverse Problems ══ -->
+      <!-- ── Slide 3: Gatorman ── -->
       <div class="group-slide">
-        <h3 class="title is-4 demo-section-title">Differentiable Inverse Problems</h3>
-        <div class="demo-stack">
-
-          <div class="demo-card">
-            <div class="demo-video-grid cols-3">
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/plant/initial_guess.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Initial Guess</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/plant/optimized.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Optimized</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/plant/groundtruth.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Ground Truth</span>
-              </div>
-            </div>
-            <div class="demo-card-body">
-              <span class="demo-tag">System identification</span>
-              <div class="demo-card-title">Plant</div>
-              <p class="demo-card-desc">System identification on an articulated potted-plant mesh whose
-                slender branches induce strong geometric non-uniformity, disambiguating Young's modulus
-                and Poisson's ratio from a single 100-frame oscillatory trajectory.</p>
-            </div>
+        <div class="demo-section-label">Contact-Rich Forward Simulation</div>
+        <div class="demo-card">
+          <div class="demo-video-single">
+            <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/gatorman/gatorman.mp4" type="video/mp4"></video></div>
           </div>
-
+          <div class="demo-card-body">
+            <span class="demo-tag">Mesh-to-mesh contact</span>
+            <div class="demo-card-title">Gatorman</div>
+            <p class="demo-card-desc">A high-resolution Gatorman character wields a stiff sword
+              (60&times; the body's reference stiffness) to strike a target sphere, exercising DiffPhD's
+              unified Signorini&ndash;Coulomb contact pipeline under transient impact.</p>
+          </div>
         </div>
+      </div>
 
-        <div class="demo-row">
-
-          <div class="demo-card">
-            <div class="demo-video-grid cols-2">
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/bunny/homo_initial_guess.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Homogeneous &middot; Initial Guess</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/bunny/homo_optimized.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Homogeneous &middot; Optimized</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/bunny/hetero_initial_guess.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Heterogeneous &middot; Initial Guess</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/bunny/hetero_optimized.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Heterogeneous &middot; Optimized</span>
-              </div>
-            </div>
-            <div class="demo-card-body">
-              <span class="demo-tag">Initial-state optimization</span>
-              <div class="demo-card-title">Bunny: Inverse Design</div>
-              <p class="demo-card-desc">On the heterogeneous Bunny benchmark, DiffPhD optimizes initial
-                position, orientation, and velocity so the bunny's center of mass reaches a target after
-                100 frames&mdash;converging where baseline solvers plateau on a suboptimal residual.</p>
-            </div>
-          </div>
-
-          <div class="demo-card">
-            <div class="demo-video-grid cols-2">
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/routing_tendon/homo_initial_guess.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Homogeneous &middot; Initial Guess</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/routing_tendon/homo_optimized.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Homogeneous &middot; Optimized</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/routing_tendon/hetero_initial_guess.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Heterogeneous &middot; Initial Guess</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/routing_tendon/hetero_optimized.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Heterogeneous &middot; Optimized</span>
-              </div>
-            </div>
-            <div class="demo-card-body">
-              <span class="demo-tag">Trajectory optimization</span>
-              <div class="demo-card-title">Routing Tendon</div>
-              <p class="demo-card-desc">A vertical beam actuated through 16 muscle groups is optimized
-                so its tip reaches a target at frame 100, contrasting homogeneous and heterogeneous
-                muscle-fibre routing layouts through the same volume.</p>
-            </div>
-          </div>
-
-        </div>
-      </div><!-- /group 3 -->
-
-      <!-- ══ Group 4: Real2Sim Robot Manipulation ══ -->
+      <!-- ── Slide 4: Napkin ── -->
       <div class="group-slide">
-        <h3 class="title is-4 demo-section-title">Real2Sim Robot Manipulation</h3>
-        <div class="demo-stack">
-
-          <div class="demo-card">
-            <div class="demo-video-grid cols-2">
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/oreo/room_in.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Camera: Room In</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/oreo/room_out.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Camera: Room Out</span>
-              </div>
+        <div class="demo-section-label">Contact-Rich Forward Simulation</div>
+        <div class="demo-card">
+          <div class="demo-video-grid cols-4">
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/homo_verysmall.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Homo &middot; 6%</span>
             </div>
-            <div class="demo-card-body">
-              <span class="demo-tag">Extreme-contrast capability check</span>
-              <div class="demo-card-title">Oreo: Robot Manipulator</div>
-              <p class="demo-card-desc">A Google Robot arm closes its 10<sup>13</sup> Pa rigid claws on a
-                five-body cookie stack (10<sup>8</sup> Pa ball, 4.55&times;10<sup>5</sup> Pa soft body),
-                the only solver among those tested to remain numerically stable at this contrast.</p>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/homo_small.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Homo &middot; 24%</span>
             </div>
-          </div>
-
-          <div class="demo-card">
-            <div class="demo-video-grid cols-3">
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/dice/initial_guess.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Initial Guess</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/dice/ground_truth.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Ground Truth</span>
-              </div>
-              <div class="demo-video-cell">
-                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/dice/optimized.mp4" type="video/mp4"></video></div>
-                <span class="demo-video-label">Optimized</span>
-              </div>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/homo_normal.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Homo &middot; 38%</span>
             </div>
-            <div class="demo-card-body">
-              <span class="demo-tag">Real2Sim recovery</span>
-              <div class="demo-card-title">Dice</div>
-              <p class="demo-card-desc">Driven by real captured data of a UR5 arm pressing a soft die,
-                DiffPhD recovers the in-plane contact location so the simulated deformation matches the
-                captured video, closing the real-to-sim gap end-to-end.</p>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/homo_big.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Homo &middot; 50%</span>
+            </div>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/hetero_verysmall.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Hetero &middot; 6%</span>
+            </div>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/hetero_small.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Hetero &middot; 24%</span>
+            </div>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/hetero_normal.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Hetero &middot; 38%</span>
+            </div>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/hetero_big.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Hetero &middot; 50%</span>
             </div>
           </div>
-
+          <div class="demo-card-body">
+            <span class="demo-tag">Homogeneous vs. Heterogeneous</span>
+            <div class="demo-card-title">Napkin: Codimensional Contact</div>
+            <p class="demo-card-desc">A one-layer napkin drapes over spherical obstacles of growing
+              size, with contact sets from 6% to 50% of the mesh (columns, left to right). The
+              heterogeneous variant (bottom row: 0.1&times; soft half vs. 1&times; stiff half) produces
+              asymmetric, more pronounced draping than the homogeneous variant (top row).</p>
+          </div>
         </div>
-      </div><!-- /group 4 -->
+      </div>
+
+      <!-- ── Slide 5: Plant ── -->
+      <div class="group-slide">
+        <div class="demo-section-label">Differentiable Inverse Problems</div>
+        <div class="demo-card">
+          <div class="demo-video-grid cols-3">
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/plant/initial_guess.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Initial Guess</span>
+            </div>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/plant/optimized.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Optimized</span>
+            </div>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/plant/groundtruth.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Ground Truth</span>
+            </div>
+          </div>
+          <div class="demo-card-body">
+            <span class="demo-tag">System identification</span>
+            <div class="demo-card-title">Plant</div>
+            <p class="demo-card-desc">System identification on an articulated potted-plant mesh whose
+              slender branches induce strong geometric non-uniformity, disambiguating Young's modulus
+              and Poisson's ratio from a single 100-frame oscillatory trajectory.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Slide 6: Bunny ── -->
+      <div class="group-slide">
+        <div class="demo-section-label">Differentiable Inverse Problems</div>
+        <div class="demo-card">
+          <div class="demo-video-grid cols-2">
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/bunny/homo_initial_guess.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Homogeneous &middot; Initial Guess</span>
+            </div>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/bunny/homo_optimized.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Homogeneous &middot; Optimized</span>
+            </div>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/bunny/hetero_initial_guess.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Heterogeneous &middot; Initial Guess</span>
+            </div>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/bunny/hetero_optimized.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Heterogeneous &middot; Optimized</span>
+            </div>
+          </div>
+          <div class="demo-card-body">
+            <span class="demo-tag">Initial-state optimization</span>
+            <div class="demo-card-title">Bunny: Inverse Design</div>
+            <p class="demo-card-desc">On the heterogeneous Bunny benchmark, DiffPhD optimizes initial
+              position, orientation, and velocity so the bunny's center of mass reaches a target after
+              100 frames&mdash;converging where baseline solvers plateau on a suboptimal residual.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Slide 7: Routing Tendon ── -->
+      <div class="group-slide">
+        <div class="demo-section-label">Differentiable Inverse Problems</div>
+        <div class="demo-card">
+          <div class="demo-video-grid cols-2">
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/routing_tendon/homo_initial_guess.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Homogeneous &middot; Initial Guess</span>
+            </div>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/routing_tendon/homo_optimized.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Homogeneous &middot; Optimized</span>
+            </div>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/routing_tendon/hetero_initial_guess.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Heterogeneous &middot; Initial Guess</span>
+            </div>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/routing_tendon/hetero_optimized.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Heterogeneous &middot; Optimized</span>
+            </div>
+          </div>
+          <div class="demo-card-body">
+            <span class="demo-tag">Trajectory optimization</span>
+            <div class="demo-card-title">Routing Tendon</div>
+            <p class="demo-card-desc">A vertical beam actuated through 16 muscle groups is optimized
+              so its tip reaches a target at frame 100, contrasting homogeneous and heterogeneous
+              muscle-fibre routing layouts through the same volume.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Slide 8: Oreo ── -->
+      <div class="group-slide">
+        <div class="demo-section-label">Real2Sim Robot Manipulation</div>
+        <div class="demo-card">
+          <div class="demo-video-grid cols-2">
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/oreo/room_in.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Camera: Room In</span>
+            </div>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/oreo/room_out.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Camera: Room Out</span>
+            </div>
+          </div>
+          <div class="demo-card-body">
+            <span class="demo-tag">Extreme-contrast capability check</span>
+            <div class="demo-card-title">Oreo: Robot Manipulator</div>
+            <p class="demo-card-desc">A Google Robot arm closes its 10<sup>13</sup> Pa rigid claws on a
+              five-body cookie stack (10<sup>8</sup> Pa ball, 4.55&times;10<sup>5</sup> Pa soft body),
+              the only solver among those tested to remain numerically stable at this contrast.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Slide 9: Dice ── -->
+      <div class="group-slide">
+        <div class="demo-section-label">Real2Sim Robot Manipulation</div>
+        <div class="demo-card">
+          <div class="demo-video-grid cols-3">
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/dice/initial_guess.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Initial Guess</span>
+            </div>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/dice/ground_truth.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Ground Truth</span>
+            </div>
+            <div class="demo-video-cell">
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/dice/optimized.mp4" type="video/mp4"></video></div>
+              <span class="demo-video-label">Optimized</span>
+            </div>
+          </div>
+          <div class="demo-card-body">
+            <span class="demo-tag">Real2Sim recovery</span>
+            <div class="demo-card-title">Dice</div>
+            <p class="demo-card-desc">Driven by real captured data of a UR5 arm pressing a soft die,
+              DiffPhD recovers the in-plane contact location so the simulated deformation matches the
+              captured video, closing the real-to-sim gap end-to-end.</p>
+          </div>
+        </div>
+      </div>
 
       <!-- Dots -->
       <div class="group-carousel-dots">
-        <button class="group-carousel-dot active" data-idx="0">Heterogeneous Forward</button>
-        <button class="group-carousel-dot" data-idx="1">Contact-Rich</button>
-        <button class="group-carousel-dot" data-idx="2">Inverse Problems</button>
-        <button class="group-carousel-dot" data-idx="3">Real2Sim</button>
+        <button class="group-carousel-dot active" data-idx="0">Armadillo</button>
+        <button class="group-carousel-dot" data-idx="1">Crab</button>
+        <button class="group-carousel-dot" data-idx="2">Gatorman</button>
+        <button class="group-carousel-dot" data-idx="3">Napkin</button>
+        <button class="group-carousel-dot" data-idx="4">Plant</button>
+        <button class="group-carousel-dot" data-idx="5">Bunny</button>
+        <button class="group-carousel-dot" data-idx="6">Routing Tendon</button>
+        <button class="group-carousel-dot" data-idx="7">Oreo</button>
+        <button class="group-carousel-dot" data-idx="8">Dice</button>
       </div>
 
     </div><!-- /group-carousel-wrapper -->
