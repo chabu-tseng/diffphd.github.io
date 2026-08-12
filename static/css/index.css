@@ -271,12 +271,25 @@ body {
 }
 
 
-/* ── Group carousel (arrows switch between 4 demo sections) ── */
+/* ── Group carousel ── */
 
 .group-carousel-wrapper {
-  position: relative;
   margin-top: 0.5rem;
-  padding: 0 2rem;
+}
+
+/* Tab-style dots — above the slides */
+.group-carousel-dots {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Stage: positioning context for arrow buttons */
+.group-carousel-stage {
+  position: relative;
+  padding: 0 2.2rem;
 }
 
 /* Viewport clips the off-screen slides; height transitions smoothly */
@@ -299,10 +312,11 @@ body {
   min-width: 100%;
 }
 
-/* Arrow buttons */
+/* Arrow buttons — vertically centred on the stage */
 .group-carousel-btn {
   position: absolute;
-  top: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 10;
   width: 2.4rem;
   height: 2.4rem;
@@ -320,17 +334,8 @@ body {
   transition: box-shadow 0.15s;
 }
 .group-carousel-btn:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.22); }
-.group-carousel-prev { left: -0.5rem; }
-.group-carousel-next { right: -0.5rem; }
-
-/* Tab-style dots */
-.group-carousel-dots {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 2rem;
-}
+.group-carousel-prev { left: -0.2rem; }
+.group-carousel-next { right: -0.2rem; }
 
 .group-carousel-dot {
   padding: 0.3rem 0.9rem;
@@ -361,10 +366,9 @@ body {
 
 .demo-section-label {
   font-family: 'Google Sans', sans-serif;
-  font-size: 0.8rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: 0.01em;
   color: #3457d5;
   margin-bottom: 0.75rem;
 }
@@ -472,7 +476,7 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 

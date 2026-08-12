@@ -254,7 +254,7 @@
   <div class="container is-max-desktop">
 
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column">
         <h2 class="title is-3">Results &amp; Demos</h2>
         <div class="content has-text-justified">
           <p>
@@ -269,6 +269,21 @@
     <!-- ── Per-demo Carousel: each demo card is its own slide ── -->
     <div class="group-carousel-wrapper">
 
+      <!-- Dots / tab nav above the slides -->
+      <div class="group-carousel-dots">
+        <button class="group-carousel-dot active" data-idx="0">Armadillo</button>
+        <button class="group-carousel-dot" data-idx="1">Crab</button>
+        <button class="group-carousel-dot" data-idx="2">Gatorman</button>
+        <button class="group-carousel-dot" data-idx="3">Napkin</button>
+        <button class="group-carousel-dot" data-idx="4">Plant</button>
+        <button class="group-carousel-dot" data-idx="5">Bunny</button>
+        <button class="group-carousel-dot" data-idx="6">Routing Tendon</button>
+        <button class="group-carousel-dot" data-idx="7">Oreo</button>
+        <button class="group-carousel-dot" data-idx="8">Dice</button>
+      </div>
+
+      <!-- Stage: arrows positioned relative to the slide content -->
+      <div class="group-carousel-stage">
       <button class="group-carousel-btn group-carousel-prev" aria-label="Previous">&#8249;</button>
       <button class="group-carousel-btn group-carousel-next" aria-label="Next">&#8250;</button>
 
@@ -550,19 +565,7 @@
 
       </div><!-- /group-slide-track -->
       </div><!-- /group-slide-viewport -->
-
-      <!-- Dots -->
-      <div class="group-carousel-dots">
-        <button class="group-carousel-dot active" data-idx="0">Armadillo</button>
-        <button class="group-carousel-dot" data-idx="1">Crab</button>
-        <button class="group-carousel-dot" data-idx="2">Gatorman</button>
-        <button class="group-carousel-dot" data-idx="3">Napkin</button>
-        <button class="group-carousel-dot" data-idx="4">Plant</button>
-        <button class="group-carousel-dot" data-idx="5">Bunny</button>
-        <button class="group-carousel-dot" data-idx="6">Routing Tendon</button>
-        <button class="group-carousel-dot" data-idx="7">Oreo</button>
-        <button class="group-carousel-dot" data-idx="8">Dice</button>
-      </div>
+      </div><!-- /group-carousel-stage -->
 
     </div><!-- /group-carousel-wrapper -->
 
