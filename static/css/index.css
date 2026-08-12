@@ -66,11 +66,36 @@ body {
     font-family: 'Google Sans', sans-serif;
 }
 
+.publication-brand {
+    font-family: 'Google Sans', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    background: linear-gradient(90deg, #2846c0, #4b6ef5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.9rem;
+}
+
+.publication-brand-rule {
+    width: 64px;
+    height: 3px;
+    margin: 0 auto 1.1rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #2846c0, #4b6ef5);
+    opacity: 0.85;
+}
+
 .publication-subtitle {
     font-family: 'Google Sans', sans-serif;
+    font-size: 1.55rem;
     font-weight: 500;
-    color: #4a4a4a;
-    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    color: #363a45;
+    max-width: 900px;
+    margin: 0 auto 1.6rem;
 }
 
 .publication-authors {
