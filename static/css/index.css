@@ -164,14 +164,10 @@ body {
 .venue-badge {
   display: inline-block;
   font-family: 'Google Sans', sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.02em;
-  color: #fff;
-  background: linear-gradient(90deg, #3457d5, #4b6ef5);
-  padding: 0.42rem 1.5rem;
-  border-radius: 999px;
-  box-shadow: 0 3px 10px rgba(52, 87, 213, 0.28);
+  color: #3457d5;
 }
 
 .publication-banner img {
