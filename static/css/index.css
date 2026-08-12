@@ -66,36 +66,61 @@ body {
     font-family: 'Google Sans', sans-serif;
 }
 
+/* Hero backdrop: soft tinted gradient */
+.pub-hero {
+    background:
+        radial-gradient(1200px 400px at 50% -120px, rgba(75, 110, 245, 0.10), transparent 70%),
+        linear-gradient(180deg, #f7f9ff 0%, #ffffff 100%);
+}
+
+/* Venue eyebrow above the title */
+.pub-venue-eyebrow {
+    margin-bottom: 1.1rem;
+}
+.pub-venue-eyebrow span {
+    display: inline-block;
+    font-family: 'Google Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #3457d5;
+    padding: 0.32rem 0.95rem;
+    border: 1.5px solid rgba(52, 87, 213, 0.3);
+    border-radius: 999px;
+    background: rgba(75, 110, 245, 0.06);
+}
+
 .publication-brand {
     font-family: 'Google Sans', sans-serif;
-    font-size: 4rem;
+    font-size: 4.25rem;
     font-weight: 800;
     line-height: 1;
-    letter-spacing: -0.01em;
-    background: linear-gradient(90deg, #2846c0, #4b6ef5);
+    letter-spacing: -0.015em;
+    background: linear-gradient(95deg, #2846c0, #4b6ef5 55%, #6d54e0);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 0.9rem;
-}
-
-.publication-brand-rule {
-    width: 64px;
-    height: 3px;
-    margin: 0 auto 1.1rem;
-    border-radius: 999px;
-    background: linear-gradient(90deg, #2846c0, #4b6ef5);
-    opacity: 0.85;
+    margin-bottom: 0.75rem;
 }
 
 .publication-subtitle {
     font-family: 'Google Sans', sans-serif;
-    font-size: 1.55rem;
+    font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.4;
     color: #363a45;
-    max-width: 900px;
+    max-width: 880px;
+    margin: 0 auto 1.4rem;
+}
+
+.publication-brand-rule {
+    width: 72px;
+    height: 3px;
     margin: 0 auto 1.6rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #2846c0, #4b6ef5);
+    opacity: 0.8;
 }
 
 .publication-authors {
@@ -133,40 +158,42 @@ body {
 
 .pub-author-row {
   font-family: 'Google Sans', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 500;
-  line-height: 1.7;
-  margin-bottom: 0.85rem;
+  line-height: 1.75;
+  max-width: 940px;
+  margin: 0 auto 1rem;
 }
 
 .pub-author-row .author-block {
-  margin: 0 0.15rem;
+  margin: 0 0.12rem;
 }
 
 .pub-author-row a {
-  color: hsl(204, 86%, 45%) !important;
+  color: #2846c0 !important;
   transition: color 0.15s;
 }
 
 .pub-author-row a:hover {
-  color: hsl(204, 90%, 35%) !important;
+  color: #4b6ef5 !important;
   text-decoration: underline;
 }
 
 .pub-author-row sup {
-  color: #888;
+  color: #9aa0ac;
   font-weight: 400;
+  font-size: 0.62em;
 }
 
 .pub-affil-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.35rem 1.3rem;
-  max-width: 1100px;
-  margin: 0 auto 0.75rem;
-  color: #555;
-  font-size: 0.98rem;
+  gap: 0.3rem 1.4rem;
+  max-width: 1000px;
+  margin: 0 auto 1rem;
+  color: #5a5f6b;
+  font-size: 0.95rem;
 }
 
 .pub-affil-row .affil-item {
@@ -176,30 +203,28 @@ body {
 .pub-affil-row sup {
   color: #3457d5;
   font-weight: 700;
-  margin-right: 0.1rem;
+  margin-right: 0.15rem;
+  font-size: 0.68em;
 }
 
 .pub-note-row {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  color: #999;
-  font-size: 0.85rem;
-  margin-bottom: 1.15rem;
+  align-items: center;
+  gap: 0.75rem;
+  color: #99a;
+  font-size: 0.84rem;
+  margin-bottom: 1.75rem;
 }
 
-.pub-venue-row {
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-
-.venue-badge {
-  display: inline-block;
-  font-family: 'Google Sans', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+.pub-note-mark {
   color: #3457d5;
+  font-weight: 700;
+}
+
+.pub-note-sep {
+  color: #c8ccd6;
+  font-size: 0.7rem;
 }
 
 .publication-banner img {
