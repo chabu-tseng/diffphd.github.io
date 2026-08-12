@@ -66,6 +66,13 @@ body {
     font-family: 'Google Sans', sans-serif;
 }
 
+.publication-subtitle {
+    font-family: 'Google Sans', sans-serif;
+    font-weight: 500;
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+}
+
 .publication-authors {
     font-family: 'Google Sans', sans-serif;
 }
