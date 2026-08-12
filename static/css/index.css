@@ -202,6 +202,51 @@ body {
 }
 
 
+/* ── Method tab switcher ── */
+
+.method-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin: 2rem 0 0;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.method-tab {
+  padding: 0.55rem 1.6rem;
+  border: none;
+  background: none;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #999;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.18s, border-color 0.18s;
+  white-space: nowrap;
+}
+
+.method-tab:hover { color: #333; }
+
+.method-tab.active {
+  color: #3457d5;
+  border-bottom-color: #3457d5;
+}
+
+.method-panel { display: none; }
+
+.method-panel.active {
+  display: block;
+  animation: method-fade 0.28s ease both;
+}
+
+@keyframes method-fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
 /* ── Method figures: 75% width, centred ── */
 
 .method-figure {

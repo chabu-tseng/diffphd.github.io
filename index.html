@@ -183,43 +183,67 @@
       </div>
     </div>
 
-    <!-- Figure 2: 75% width, centered -->
-    <figure class="method-figure">
-      <img src="./static/images/diffphd_fig2_heterogeneity.png"
-           alt="Figure 2: Two consequences of material heterogeneity in Neo-Hookean PD">
-      <figcaption>
-        <b>Figure 2. Two consequences of material heterogeneity in Neo-Hookean PD.</b>
-        (a) The heterogeneous Neo-Hookean energy: a bar with stiff (red) and soft (blue)
-        regions deforms qualitatively differently under stretch and twist, and the energy's
-        logarithmic barrier prevents element inversion. (b) <i>Consequence C1 (global).</i>
-        The spectrum of the global tangent stiffness widens directly with the stiffness
-        contrast &mu;<sub>max</sub>/&mu;<sub>min</sub>&mdash;absorbing this contrast into the
-        assembled operator <i>A</i> keeps its inversion robust. (c) <i>Consequence C2
-        (local).</i> Non-convexity is element-localized: a soft element near collapse
-        develops an indefinite local Hessian, while its stiff neighbour stays positive
-        definite. A uniform per-element filter under-serves both regimes, motivating a
-        state-adaptive trust-region filter applied only in the backward pass.
-      </figcaption>
-    </figure>
+    <!-- Method tabs -->
+    <div class="method-tabs">
+      <button class="method-tab active" data-tab="0">Heterogeneity</button>
+      <button class="method-tab"        data-tab="1">Projective Assembly</button>
+    </div>
 
-    <!-- Figure 4: 75% width, centered -->
-    <figure class="method-figure">
-      <img src="./static/images/diffphd_fig4_routing.png"
-           alt="Figure 4: Stiffness-aware projective assembly">
-      <figcaption>
-        <b>Figure 4. Stiffness-aware projective assembly.</b>
-        (a) Heterogeneity is routed through the global operator <i>A</i>, not the local prox:
-        per-element material parameters enter <i>A</i> only through projective weights
-        <i>w<sub>e</sub></i>&nbsp;&prop;&nbsp;<i>&mu;<sub>e</sub></i>; the local prox sees
-        only mesh-wide scalar means. (b) Why per-element local prox fails: mixing soft and
-        stiff elements in the local Newton makes its projective Hessian element-varying, so
-        per-element iterates ping-pong across PD iterations and Anderson Acceleration
-        amplifies the drift into mesh-level divergence. (c) <i>A</i>-only routing preserves
-        contraction: stiff weights enter <i>A</i> and widen its spectrum with contrast, but
-        every element still runs the <i>same</i> Newton-on-stretches, so the PD fixed-point
-        stays contractive.
-      </figcaption>
-    </figure>
+    <div class="method-panel active">
+      <figure class="method-figure">
+        <img src="./static/images/diffphd_fig2_heterogeneity.png"
+             alt="Figure 2: Two consequences of material heterogeneity in Neo-Hookean PD">
+        <figcaption>
+          <b>Figure 2. Two consequences of material heterogeneity in Neo-Hookean PD.</b>
+          (a) The heterogeneous Neo-Hookean energy: a bar with stiff (red) and soft (blue)
+          regions deforms qualitatively differently under stretch and twist, and the energy's
+          logarithmic barrier prevents element inversion. (b) <i>Consequence C1 (global).</i>
+          The spectrum of the global tangent stiffness widens directly with the stiffness
+          contrast &mu;<sub>max</sub>/&mu;<sub>min</sub>&mdash;absorbing this contrast into the
+          assembled operator <i>A</i> keeps its inversion robust. (c) <i>Consequence C2
+          (local).</i> Non-convexity is element-localized: a soft element near collapse
+          develops an indefinite local Hessian, while its stiff neighbour stays positive
+          definite. A uniform per-element filter under-serves both regimes, motivating a
+          state-adaptive trust-region filter applied only in the backward pass.
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="method-panel">
+      <figure class="method-figure">
+        <img src="./static/images/diffphd_fig4_routing.png"
+             alt="Figure 4: Stiffness-aware projective assembly">
+        <figcaption>
+          <b>Figure 4. Stiffness-aware projective assembly.</b>
+          (a) Heterogeneity is routed through the global operator <i>A</i>, not the local prox:
+          per-element material parameters enter <i>A</i> only through projective weights
+          <i>w<sub>e</sub></i>&nbsp;&prop;&nbsp;<i>&mu;<sub>e</sub></i>; the local prox sees
+          only mesh-wide scalar means. (b) Why per-element local prox fails: mixing soft and
+          stiff elements in the local Newton makes its projective Hessian element-varying, so
+          per-element iterates ping-pong across PD iterations and Anderson Acceleration
+          amplifies the drift into mesh-level divergence. (c) <i>A</i>-only routing preserves
+          contraction: stiff weights enter <i>A</i> and widen its spectrum with contrast, but
+          every element still runs the <i>same</i> Newton-on-stretches, so the PD fixed-point
+          stays contractive.
+        </figcaption>
+      </figure>
+    </div>
+
+    <script>
+    (function () {
+      var tabs   = Array.from(document.querySelectorAll('.method-tab'));
+      var panels = Array.from(document.querySelectorAll('.method-panel'));
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var idx = parseInt(tab.dataset.tab);
+          tabs.forEach(function (t) { t.classList.remove('active'); });
+          panels.forEach(function (p) { p.classList.remove('active'); });
+          tabs[idx].classList.add('active');
+          panels[idx].classList.add('active');
+        });
+      });
+    })();
+    </script>
 
   </div>
 </section>
