@@ -73,9 +73,9 @@ body {
         linear-gradient(180deg, #f7f9ff 0%, #ffffff 100%);
 }
 
-/* Venue eyebrow above the title */
+/* Venue pill */
 .pub-venue-eyebrow {
-    margin-bottom: 1.1rem;
+    margin: 0.25rem 0 1.6rem;
 }
 .pub-venue-eyebrow span {
     display: inline-block;
@@ -111,16 +111,7 @@ body {
     line-height: 1.4;
     color: #363a45;
     max-width: 880px;
-    margin: 0 auto 1.4rem;
-}
-
-.publication-brand-rule {
-    width: 72px;
-    height: 3px;
-    margin: 0 auto 1.6rem;
-    border-radius: 999px;
-    background: linear-gradient(90deg, #2846c0, #4b6ef5);
-    opacity: 0.8;
+    margin: 0 auto 1.9rem;
 }
 
 .publication-authors {
