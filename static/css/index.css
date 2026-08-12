@@ -171,27 +171,155 @@ body {
   border-radius: 5px;
 }
 
-/* ---- DiffPhD demo gallery ---- */
+/* ── Teaser video placeholder ── */
 
-.demo-section-title {
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.demo-card {
-  border: 1px solid #e2e2e2;
+.teaser-video-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #1a1a2e;
   border-radius: 10px;
-  overflow: hidden;
-  background: #fff;
   display: flex;
-  flex-direction: column;
-  max-width: 560px;
-  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
+
+.teaser-video-inner {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.teaser-video-inner .fas {
+  font-size: 4rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.teaser-video-inner p {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+}
+
+
+/* ── Method figures: full-width stacked ── */
+
+.method-figure {
+  margin: 2.5rem 0 0;
+}
+
+.method-figure img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.method-figure figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: #555;
+  text-align: justify;
+  line-height: 1.55;
+}
+
+
+/* ── Results carousel ── */
+
+.demo-carousel-wrapper {
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.demo-carousel-track-outer {
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid #e2e2e2;
+  background: #fff;
+}
+
+.demo-carousel-track {
+  position: relative;
+}
+
+/* All slides hidden by default; JS adds .active */
+.demo-carousel-slide {
+  display: none;
+  flex-direction: column;
+}
+
+.demo-carousel-slide.active {
+  display: flex;
+}
+
+.demo-carousel-section-label {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888;
+  padding: 0.9rem 1.2rem 0;
+}
+
+/* Arrow buttons */
+.demo-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  cursor: pointer;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.15s, background 0.15s;
+}
+
+.demo-carousel-btn:hover {
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.22);
+}
+
+.demo-carousel-prev { left: -1.4rem; }
+.demo-carousel-next { right: -1.4rem; }
+
+/* Dot indicators */
+.demo-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.1rem;
+}
+
+.demo-carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.demo-carousel-dot.active {
+  background: #3457d5;
+  transform: scale(1.25);
+}
+
+
+/* ── Shared card body & video primitives ── */
 
 .demo-card-body {
-  padding: 1rem 1.2rem 1.2rem;
-  flex: 1;
+  padding: 1rem 1.2rem 1.4rem;
   display: flex;
   flex-direction: column;
 }
@@ -206,7 +334,6 @@ body {
 .demo-card-desc {
   color: #444;
   font-size: 0.95rem;
-  flex: 1;
 }
 
 .demo-tag {
@@ -221,35 +348,6 @@ body {
   color: #3457d5;
   margin-bottom: 0.5rem;
   width: fit-content;
-}
-
-/* ---- Multi-video comparison grids within a demo card ---- */
-
-.demo-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 1.75rem;
-  margin-bottom: 1rem;
-}
-
-.demo-stack .demo-card {
-  max-width: none;
-  margin: 0;
-}
-
-.demo-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.demo-row .demo-card {
-  margin: 0;
-  flex: 1 1 380px;
-  max-width: 480px;
 }
 
 .demo-video-grid {
