@@ -437,38 +437,26 @@ body {
 .demo-video-grid {
   display: grid;
   gap: 3px;
-  background: #000;
+  background: #e8e8e8;
 }
 
 .demo-video-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
 .demo-video-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
 .demo-video-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
 
-/* cols-3 videos are 1/3 wide — use 4:3 so they stay readable */
-.demo-video-grid.cols-3 .video-ph { aspect-ratio: 4 / 3; }
-
 .demo-video-cell {
   position: relative;
-  background: #000;
+  background: #fff;
   line-height: 0;
 }
 
-/* 16:9 placeholder box — visible whether or not the video loads */
+/* Video placeholder — white background, 4:3 by default */
 .video-ph {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  background: #1c1c2e;
+  aspect-ratio: 4 / 3;
+  background: #fff;
   overflow: hidden;
-}
-
-.video-ph::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border: 2px dashed rgba(255,255,255,0.18);
-  pointer-events: none;
-  z-index: 1;
 }
 
 .video-ph video {
@@ -478,6 +466,7 @@ body {
   height: 100%;
   object-fit: contain;
   display: block;
+  background: #fff;
 }
 
 .demo-video-label {
