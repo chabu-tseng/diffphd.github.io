@@ -68,47 +68,33 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
               <span class="link-block">
                 <a href="./static/pdf/diffphd_paper.pdf"
                    class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
                   <span>Paper</span>
                 </a>
               </span>
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2605.14526"
                    class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
               <span class="link-block">
-                <a href="#"
-                   class="external-link button is-normal is-rounded is-dark" disabled>
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
+                <a href="#" class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon"><i class="fab fa-youtube"></i></span>
                   <span>Video (coming soon)</span>
                 </a>
               </span>
-              <!-- Code Link. -->
               <span class="link-block">
-                <a href="#"
-                   class="external-link button is-normal is-rounded is-dark" disabled>
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
+                <a href="#" class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon"><i class="fab fa-github"></i></span>
                   <span>Code (coming soon)</span>
-                  </a>
+                </a>
               </span>
             </div>
-
           </div>
         </div>
       </div>
@@ -116,7 +102,7 @@
   </div>
 </section>
 
-<!-- ── Teaser: video placeholder ── -->
+<!-- ── Teaser ── -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -136,9 +122,9 @@
 </section>
 
 
+<!-- ── Abstract ── -->
 <section class="section section-alt-a">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
@@ -170,11 +156,11 @@
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
   </div>
 </section>
 
 
+<!-- ── Method Overview ── -->
 <section class="section section-alt-b">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -197,7 +183,7 @@
       </div>
     </div>
 
-    <!-- Figure 2: full-width -->
+    <!-- Figure 2: 75% width, centered -->
     <figure class="method-figure">
       <img src="./static/images/diffphd_fig2_heterogeneity.png"
            alt="Figure 2: Two consequences of material heterogeneity in Neo-Hookean PD">
@@ -216,7 +202,7 @@
       </figcaption>
     </figure>
 
-    <!-- Figure 4: full-width -->
+    <!-- Figure 4: 75% width, centered -->
     <figure class="method-figure">
       <img src="./static/images/diffphd_fig4_routing.png"
            alt="Figure 4: Stiffness-aware projective assembly">
@@ -239,6 +225,7 @@
 </section>
 
 
+<!-- ── Results & Demos ── -->
 <section class="section section-alt-a">
   <div class="container is-max-desktop">
 
@@ -255,40 +242,33 @@
       </div>
     </div>
 
-    <!-- ── Results Carousel ── -->
-    <div class="demo-carousel-wrapper">
-      <button class="demo-carousel-btn demo-carousel-prev" aria-label="Previous">&#8249;</button>
-      <button class="demo-carousel-btn demo-carousel-next" aria-label="Next">&#8250;</button>
+    <!-- ── Group Carousel: arrows switch between the 4 demo sections ── -->
+    <div class="group-carousel-wrapper">
 
-      <div class="demo-carousel-track-outer">
-        <div class="demo-carousel-track">
+      <button class="group-carousel-btn group-carousel-prev" aria-label="Previous group">&#8249;</button>
+      <button class="group-carousel-btn group-carousel-next" aria-label="Next group">&#8250;</button>
 
-          <!-- ── Slide 1: Armadillo ── -->
-          <div class="demo-carousel-slide">
-            <div class="demo-carousel-section-label">Heterogeneous Forward Simulation</div>
+      <!-- ══ Group 1: Heterogeneous Forward Simulation ══ -->
+      <div class="group-slide active">
+        <h3 class="title is-4 demo-section-title">Heterogeneous Forward Simulation</h3>
+        <div class="demo-stack">
+
+          <div class="demo-card">
             <div class="demo-video-grid cols-4">
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/armadillo/homo_pd_energy.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/armadillo/homo_pd_energy.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Homogeneous &middot; PD Energy</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/armadillo/homo_neohookean.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/armadillo/homo_neohookean.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Homogeneous &middot; Neo-Hookean</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/armadillo/hetero_pd_energy.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/armadillo/hetero_pd_energy.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Heterogeneous &middot; PD Energy</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/armadillo/hetero_neohookean.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/armadillo/hetero_neohookean.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Heterogeneous &middot; Neo-Hookean</span>
               </div>
             </div>
@@ -302,26 +282,18 @@
             </div>
           </div>
 
-          <!-- ── Slide 2: Crab ── -->
-          <div class="demo-carousel-slide">
-            <div class="demo-carousel-section-label">Heterogeneous Forward Simulation</div>
+          <div class="demo-card">
             <div class="demo-video-grid cols-3">
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/crab/homo_front.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/crab/homo_front.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Homogeneous</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/crab/hetero_front.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/crab/hetero_front.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Heterogeneous (front)</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/crab/hetero_back.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/crab/hetero_back.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Heterogeneous (back)</span>
               </div>
             </div>
@@ -334,13 +306,17 @@
             </div>
           </div>
 
-          <!-- ── Slide 3: Gatorman ── -->
-          <div class="demo-carousel-slide">
-            <div class="demo-carousel-section-label">Contact-Rich Forward Simulation</div>
+        </div>
+      </div><!-- /group 1 -->
+
+      <!-- ══ Group 2: Contact-Rich Forward Simulation ══ -->
+      <div class="group-slide">
+        <h3 class="title is-4 demo-section-title">Contact-Rich Forward Simulation</h3>
+        <div class="demo-stack">
+
+          <div class="demo-card">
             <div class="demo-video-single">
-              <video autoplay muted loop playsinline>
-                <source src="./static/videos/gatorman/gatorman.mp4" type="video/mp4">
-              </video>
+              <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/gatorman/gatorman.mp4" type="video/mp4"></video></div>
             </div>
             <div class="demo-card-body">
               <span class="demo-tag">Mesh-to-mesh contact</span>
@@ -351,56 +327,38 @@
             </div>
           </div>
 
-          <!-- ── Slide 4: Napkin ── -->
-          <div class="demo-carousel-slide">
-            <div class="demo-carousel-section-label">Contact-Rich Forward Simulation</div>
+          <div class="demo-card">
             <div class="demo-video-grid cols-4">
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/napkin/homo_verysmall.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/homo_verysmall.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Homo &middot; 6%</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/napkin/homo_small.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/homo_small.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Homo &middot; 24%</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/napkin/homo_normal.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/homo_normal.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Homo &middot; 38%</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/napkin/homo_big.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/homo_big.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Homo &middot; 50%</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/napkin/hetero_verysmall.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/hetero_verysmall.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Hetero &middot; 6%</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/napkin/hetero_small.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/hetero_small.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Hetero &middot; 24%</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/napkin/hetero_normal.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/hetero_normal.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Hetero &middot; 38%</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/napkin/hetero_big.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/napkin/hetero_big.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Hetero &middot; 50%</span>
               </div>
             </div>
@@ -414,26 +372,26 @@
             </div>
           </div>
 
-          <!-- ── Slide 5: Plant ── -->
-          <div class="demo-carousel-slide">
-            <div class="demo-carousel-section-label">Differentiable Inverse Problems</div>
+        </div>
+      </div><!-- /group 2 -->
+
+      <!-- ══ Group 3: Differentiable Inverse Problems ══ -->
+      <div class="group-slide">
+        <h3 class="title is-4 demo-section-title">Differentiable Inverse Problems</h3>
+        <div class="demo-stack">
+
+          <div class="demo-card">
             <div class="demo-video-grid cols-3">
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/plant/initial_guess.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/plant/initial_guess.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Initial Guess</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/plant/optimized.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/plant/optimized.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Optimized</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/plant/groundtruth.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/plant/groundtruth.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Ground Truth</span>
               </div>
             </div>
@@ -446,32 +404,26 @@
             </div>
           </div>
 
-          <!-- ── Slide 6: Bunny ── -->
-          <div class="demo-carousel-slide">
-            <div class="demo-carousel-section-label">Differentiable Inverse Problems</div>
+        </div>
+
+        <div class="demo-row">
+
+          <div class="demo-card">
             <div class="demo-video-grid cols-2">
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/bunny/homo_initial_guess.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/bunny/homo_initial_guess.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Homogeneous &middot; Initial Guess</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/bunny/homo_optimized.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/bunny/homo_optimized.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Homogeneous &middot; Optimized</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/bunny/hetero_initial_guess.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/bunny/hetero_initial_guess.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Heterogeneous &middot; Initial Guess</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/bunny/hetero_optimized.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/bunny/hetero_optimized.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Heterogeneous &middot; Optimized</span>
               </div>
             </div>
@@ -484,32 +436,22 @@
             </div>
           </div>
 
-          <!-- ── Slide 7: Routing Tendon ── -->
-          <div class="demo-carousel-slide">
-            <div class="demo-carousel-section-label">Differentiable Inverse Problems</div>
+          <div class="demo-card">
             <div class="demo-video-grid cols-2">
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/routing_tendon/homo_initial_guess.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/routing_tendon/homo_initial_guess.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Homogeneous &middot; Initial Guess</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/routing_tendon/homo_optimized.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/routing_tendon/homo_optimized.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Homogeneous &middot; Optimized</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/routing_tendon/hetero_initial_guess.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/routing_tendon/hetero_initial_guess.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Heterogeneous &middot; Initial Guess</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/routing_tendon/hetero_optimized.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/routing_tendon/hetero_optimized.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Heterogeneous &middot; Optimized</span>
               </div>
             </div>
@@ -522,20 +464,22 @@
             </div>
           </div>
 
-          <!-- ── Slide 8: Oreo ── -->
-          <div class="demo-carousel-slide">
-            <div class="demo-carousel-section-label">Real2Sim Robot Manipulation</div>
+        </div>
+      </div><!-- /group 3 -->
+
+      <!-- ══ Group 4: Real2Sim Robot Manipulation ══ -->
+      <div class="group-slide">
+        <h3 class="title is-4 demo-section-title">Real2Sim Robot Manipulation</h3>
+        <div class="demo-stack">
+
+          <div class="demo-card">
             <div class="demo-video-grid cols-2">
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/oreo/room_in.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/oreo/room_in.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Camera: Room In</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/oreo/room_out.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/oreo/room_out.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Camera: Room Out</span>
               </div>
             </div>
@@ -548,26 +492,18 @@
             </div>
           </div>
 
-          <!-- ── Slide 9: Dice ── -->
-          <div class="demo-carousel-slide">
-            <div class="demo-carousel-section-label">Real2Sim Robot Manipulation</div>
+          <div class="demo-card">
             <div class="demo-video-grid cols-3">
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/dice/initial_guess.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/dice/initial_guess.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Initial Guess</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/dice/ground_truth.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/dice/ground_truth.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Ground Truth</span>
               </div>
               <div class="demo-video-cell">
-                <video autoplay muted loop playsinline>
-                  <source src="./static/videos/dice/optimized.mp4" type="video/mp4">
-                </video>
+                <div class="video-ph"><video autoplay muted loop playsinline><source src="./static/videos/dice/optimized.mp4" type="video/mp4"></video></div>
                 <span class="demo-video-label">Optimized</span>
               </div>
             </div>
@@ -580,18 +516,24 @@
             </div>
           </div>
 
-        </div><!-- /.demo-carousel-track -->
-      </div><!-- /.demo-carousel-track-outer -->
+        </div>
+      </div><!-- /group 4 -->
 
-      <!-- Dot indicators -->
-      <div class="demo-carousel-dots" id="carouselDots"></div>
+      <!-- Dots -->
+      <div class="group-carousel-dots">
+        <button class="group-carousel-dot active" data-idx="0">Heterogeneous Forward</button>
+        <button class="group-carousel-dot" data-idx="1">Contact-Rich</button>
+        <button class="group-carousel-dot" data-idx="2">Inverse Problems</button>
+        <button class="group-carousel-dot" data-idx="3">Real2Sim</button>
+      </div>
 
-    </div><!-- /.demo-carousel-wrapper -->
+    </div><!-- /group-carousel-wrapper -->
 
   </div>
 </section>
 
 
+<!-- ── BibTeX ── -->
 <section class="section section-alt-b" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
@@ -608,8 +550,7 @@
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/pdf/diffphd_paper.pdf">
+      <a class="icon-link" href="./static/pdf/diffphd_paper.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
       <a class="icon-link" href="#" class="external-link" disabled>
@@ -633,45 +574,28 @@
 
 <script>
 (function () {
-  var track = document.querySelector('.demo-carousel-track');
-  var slides = Array.from(document.querySelectorAll('.demo-carousel-slide'));
-  var dotsContainer = document.getElementById('carouselDots');
+  var slides = Array.from(document.querySelectorAll('.group-slide'));
+  var dots   = Array.from(document.querySelectorAll('.group-carousel-dot'));
   var current = 0;
-
-  // Build dots
-  slides.forEach(function (_, i) {
-    var dot = document.createElement('button');
-    dot.className = 'demo-carousel-dot' + (i === 0 ? ' active' : '');
-    dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-    dot.addEventListener('click', function () { goTo(i); });
-    dotsContainer.appendChild(dot);
-  });
 
   function goTo(idx) {
     slides[current].classList.remove('active');
-    dotsContainer.children[current].classList.remove('active');
+    dots[current].classList.remove('active');
     current = (idx + slides.length) % slides.length;
     slides[current].classList.add('active');
-    dotsContainer.children[current].classList.add('active');
-    // play videos in active slide
+    dots[current].classList.add('active');
     slides[current].querySelectorAll('video').forEach(function (v) {
       v.play().catch(function(){});
     });
   }
 
-  // Show first slide
-  slides[0].classList.add('active');
-
-  document.querySelector('.demo-carousel-prev').addEventListener('click', function () {
-    goTo(current - 1);
+  document.querySelector('.group-carousel-prev').addEventListener('click', function () { goTo(current - 1); });
+  document.querySelector('.group-carousel-next').addEventListener('click', function () { goTo(current + 1); });
+  dots.forEach(function (d) {
+    d.addEventListener('click', function () { goTo(parseInt(d.dataset.idx)); });
   });
-  document.querySelector('.demo-carousel-next').addEventListener('click', function () {
-    goTo(current + 1);
-  });
-
-  // Keyboard navigation
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'ArrowLeft') goTo(current - 1);
+    if (e.key === 'ArrowLeft')  goTo(current - 1);
     if (e.key === 'ArrowRight') goTo(current + 1);
   });
 })();

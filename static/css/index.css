@@ -202,10 +202,11 @@ body {
 }
 
 
-/* ── Method figures: full-width stacked ── */
+/* ── Method figures: 75% width, centred ── */
 
 .method-figure {
-  margin: 2.5rem 0 0;
+  margin: 2.5rem auto 0;
+  width: 75%;
 }
 
 .method-figure img {
@@ -223,105 +224,107 @@ body {
 }
 
 
-/* ── Results carousel ── */
+/* ── Group carousel (arrows switch between 4 demo sections) ── */
 
-.demo-carousel-wrapper {
+.group-carousel-wrapper {
   position: relative;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
+  padding: 0 2rem;
 }
 
-.demo-carousel-track-outer {
-  overflow: hidden;
-  border-radius: 12px;
-  border: 1px solid #e2e2e2;
-  background: #fff;
-}
-
-.demo-carousel-track {
-  position: relative;
-}
-
-/* All slides hidden by default; JS adds .active */
-.demo-carousel-slide {
-  display: none;
-  flex-direction: column;
-}
-
-.demo-carousel-slide.active {
-  display: flex;
-}
-
-.demo-carousel-section-label {
-  font-family: 'Google Sans', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #888;
-  padding: 0.9rem 1.2rem 0;
-}
+.group-slide { display: none; }
+.group-slide.active { display: block; }
 
 /* Arrow buttons */
-.demo-carousel-btn {
+.group-carousel-btn {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 3rem;
   z-index: 10;
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 2.4rem;
+  height: 2.4rem;
   border-radius: 50%;
   border: none;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   cursor: pointer;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   line-height: 1;
   color: #333;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: box-shadow 0.15s, background 0.15s;
+  transition: box-shadow 0.15s;
 }
+.group-carousel-btn:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.22); }
+.group-carousel-prev { left: -0.5rem; }
+.group-carousel-next { right: -0.5rem; }
 
-.demo-carousel-btn:hover {
-  background: #fff;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.22);
-}
-
-.demo-carousel-prev { left: -1.4rem; }
-.demo-carousel-next { right: -1.4rem; }
-
-/* Dot indicators */
-.demo-carousel-dots {
+/* Tab-style dots */
+.group-carousel-dots {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 1.1rem;
+  margin-top: 2rem;
 }
 
-.demo-carousel-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  border: none;
-  background: #ccc;
+.group-carousel-dot {
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  border: 1.5px solid #ccc;
+  background: #fff;
+  color: #666;
+  font-size: 0.78rem;
+  font-weight: 600;
   cursor: pointer;
-  padding: 0;
-  transition: background 0.2s, transform 0.2s;
+  transition: all 0.18s;
+  font-family: 'Google Sans', sans-serif;
 }
 
-.demo-carousel-dot.active {
+.group-carousel-dot.active {
   background: #3457d5;
-  transform: scale(1.25);
+  border-color: #3457d5;
+  color: #fff;
 }
 
 
-/* ── Shared card body & video primitives ── */
+/* ── Demo gallery (original stack / row layout) ── */
+
+.demo-section-title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.demo-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.demo-row .demo-card {
+  flex: 1 1 380px;
+  max-width: 480px;
+}
+
+.demo-card {
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
 
 .demo-card-body {
   padding: 1rem 1.2rem 1.4rem;
-  display: flex;
-  flex-direction: column;
 }
 
 .demo-card-title {
@@ -350,6 +353,9 @@ body {
   width: fit-content;
 }
 
+
+/* ── Video grid & 16:9 placeholder ── */
+
 .demo-video-grid {
   display: grid;
   gap: 3px;
@@ -366,8 +372,30 @@ body {
   line-height: 0;
 }
 
-.demo-video-cell video {
+/* 16:9 placeholder box — visible whether or not the video loads */
+.video-ph {
+  position: relative;
   width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #1c1c2e;
+  overflow: hidden;
+}
+
+.video-ph::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px dashed rgba(255,255,255,0.18);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.video-ph video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
@@ -386,10 +414,9 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  z-index: 2;
 }
 
-.demo-video-single video {
-  width: 100%;
-  display: block;
-  background: #000;
+.demo-video-single .video-ph {
+  border-radius: 0;
 }
