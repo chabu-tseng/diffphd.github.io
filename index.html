@@ -248,8 +248,12 @@
       <button class="group-carousel-btn group-carousel-prev" aria-label="Previous">&#8249;</button>
       <button class="group-carousel-btn group-carousel-next" aria-label="Next">&#8250;</button>
 
+      <!-- ── slide viewport + track ── -->
+      <div class="group-slide-viewport">
+      <div class="group-slide-track">
+
       <!-- ── Slide 1: Armadillo ── -->
-      <div class="group-slide active">
+      <div class="group-slide">
         <div class="demo-section-label">Heterogeneous Forward Simulation</div>
         <div class="demo-card">
           <!-- cols-2: left col = Homo, right col = Hetero -->
@@ -520,6 +524,9 @@
         </div>
       </div>
 
+      </div><!-- /group-slide-track -->
+      </div><!-- /group-slide-viewport -->
+
       <!-- Dots -->
       <div class="group-carousel-dots">
         <button class="group-carousel-dot active" data-idx="0">Armadillo</button>
@@ -580,46 +587,48 @@
 
 <script>
 (function () {
+  var track    = document.querySelector('.group-slide-track');
+  var viewport = document.querySelector('.group-slide-viewport');
   var slides   = Array.from(document.querySelectorAll('.group-slide'));
   var dots     = Array.from(document.querySelectorAll('.group-carousel-dot'));
   var current  = 0;
-  var busy     = false;
 
-  function goTo(idx, dir) {
-    if (busy) return;
+  function syncHeight() {
+    viewport.style.height = slides[current].offsetHeight + 'px';
+  }
+
+  function goTo(idx) {
     var next = (idx + slides.length) % slides.length;
     if (next === current) return;
-
-    // infer direction from dot clicks when dir not supplied
-    if (!dir) dir = next > current ? 'right' : 'left';
-
-    busy = true;
-    slides[current].classList.remove('active');
     dots[current].classList.remove('active');
     current = next;
-
-    var cls = dir === 'right' ? 'gc-from-right' : 'gc-from-left';
-    slides[current].classList.add('active', cls);
     dots[current].classList.add('active');
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    syncHeight();
     slides[current].querySelectorAll('video').forEach(function (v) {
       v.play().catch(function () {});
     });
-
-    slides[current].addEventListener('animationend', function clear() {
-      slides[current].classList.remove(cls);
-      slides[current].removeEventListener('animationend', clear);
-      busy = false;
-    });
   }
 
-  document.querySelector('.group-carousel-prev').addEventListener('click', function () { goTo(current - 1, 'left'); });
-  document.querySelector('.group-carousel-next').addEventListener('click', function () { goTo(current + 1, 'right'); });
+  /* Set initial height once layout is known */
+  function init() {
+    syncHeight();
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+  window.addEventListener('resize', syncHeight);
+
+  document.querySelector('.group-carousel-prev').addEventListener('click', function () { goTo(current - 1); });
+  document.querySelector('.group-carousel-next').addEventListener('click', function () { goTo(current + 1); });
   dots.forEach(function (d) {
     d.addEventListener('click', function () { goTo(parseInt(d.dataset.idx)); });
   });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'ArrowLeft')  goTo(current - 1, 'left');
-    if (e.key === 'ArrowRight') goTo(current + 1, 'right');
+    if (e.key === 'ArrowLeft')  goTo(current - 1);
+    if (e.key === 'ArrowRight') goTo(current + 1);
   });
 })();
 </script>

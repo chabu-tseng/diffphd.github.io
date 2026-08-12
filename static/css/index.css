@@ -232,20 +232,25 @@ body {
   padding: 0 2rem;
 }
 
-.group-slide { display: none; }
-.group-slide.active { display: block; }
-
-@keyframes gc-in-right {
-  from { opacity: 0; transform: translateX(48px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-@keyframes gc-in-left {
-  from { opacity: 0; transform: translateX(-48px); }
-  to   { opacity: 1; transform: translateX(0); }
+/* Viewport clips the off-screen slides; height transitions smoothly */
+.group-slide-viewport {
+  overflow: hidden;
+  transition: height 0.42s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.group-slide.gc-from-right { animation: gc-in-right 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
-.group-slide.gc-from-left  { animation: gc-in-left  0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+/* Track lays all slides in a horizontal row and slides between them */
+.group-slide-track {
+  display: flex;
+  align-items: flex-start;
+  transition: transform 0.42s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+/* Each slide occupies exactly one viewport-width slot */
+.group-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+}
 
 /* Arrow buttons */
 .group-carousel-btn {
