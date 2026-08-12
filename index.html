@@ -580,29 +580,46 @@
 
 <script>
 (function () {
-  var slides = Array.from(document.querySelectorAll('.group-slide'));
-  var dots   = Array.from(document.querySelectorAll('.group-carousel-dot'));
-  var current = 0;
+  var slides   = Array.from(document.querySelectorAll('.group-slide'));
+  var dots     = Array.from(document.querySelectorAll('.group-carousel-dot'));
+  var current  = 0;
+  var busy     = false;
 
-  function goTo(idx) {
+  function goTo(idx, dir) {
+    if (busy) return;
+    var next = (idx + slides.length) % slides.length;
+    if (next === current) return;
+
+    // infer direction from dot clicks when dir not supplied
+    if (!dir) dir = next > current ? 'right' : 'left';
+
+    busy = true;
     slides[current].classList.remove('active');
     dots[current].classList.remove('active');
-    current = (idx + slides.length) % slides.length;
-    slides[current].classList.add('active');
+    current = next;
+
+    var cls = dir === 'right' ? 'gc-from-right' : 'gc-from-left';
+    slides[current].classList.add('active', cls);
     dots[current].classList.add('active');
     slides[current].querySelectorAll('video').forEach(function (v) {
-      v.play().catch(function(){});
+      v.play().catch(function () {});
+    });
+
+    slides[current].addEventListener('animationend', function clear() {
+      slides[current].classList.remove(cls);
+      slides[current].removeEventListener('animationend', clear);
+      busy = false;
     });
   }
 
-  document.querySelector('.group-carousel-prev').addEventListener('click', function () { goTo(current - 1); });
-  document.querySelector('.group-carousel-next').addEventListener('click', function () { goTo(current + 1); });
+  document.querySelector('.group-carousel-prev').addEventListener('click', function () { goTo(current - 1, 'left'); });
+  document.querySelector('.group-carousel-next').addEventListener('click', function () { goTo(current + 1, 'right'); });
   dots.forEach(function (d) {
     d.addEventListener('click', function () { goTo(parseInt(d.dataset.idx)); });
   });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'ArrowLeft')  goTo(current - 1);
-    if (e.key === 'ArrowRight') goTo(current + 1);
+    if (e.key === 'ArrowLeft')  goTo(current - 1, 'left');
+    if (e.key === 'ArrowRight') goTo(current + 1, 'right');
   });
 })();
 </script>
