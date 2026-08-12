@@ -97,6 +97,83 @@ body {
   display: inline-block;
 }
 
+/* ── Author / affiliation / venue block ── */
+
+.pub-author-row {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.7;
+  margin-bottom: 0.85rem;
+}
+
+.pub-author-row .author-block {
+  margin: 0 0.15rem;
+}
+
+.pub-author-row a {
+  color: hsl(204, 86%, 45%) !important;
+  transition: color 0.15s;
+}
+
+.pub-author-row a:hover {
+  color: hsl(204, 90%, 35%) !important;
+  text-decoration: underline;
+}
+
+.pub-author-row sup {
+  color: #888;
+  font-weight: 400;
+}
+
+.pub-affil-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 1.1rem;
+  max-width: 780px;
+  margin: 0 auto 0.75rem;
+  color: #555;
+  font-size: 0.98rem;
+}
+
+.pub-affil-row .affil-item {
+  white-space: nowrap;
+}
+
+.pub-affil-row sup {
+  color: #3457d5;
+  font-weight: 700;
+  margin-right: 0.1rem;
+}
+
+.pub-note-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  color: #999;
+  font-size: 0.85rem;
+  margin-bottom: 1.15rem;
+}
+
+.pub-venue-row {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.venue-badge {
+  display: inline-block;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff;
+  background: linear-gradient(90deg, #3457d5, #4b6ef5);
+  padding: 0.42rem 1.5rem;
+  border-radius: 999px;
+  box-shadow: 0 3px 10px rgba(52, 87, 213, 0.28);
+}
+
 .publication-banner img {
 }
 
